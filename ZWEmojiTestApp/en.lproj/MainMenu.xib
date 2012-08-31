@@ -1301,7 +1301,7 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{466, 188}, {485, 465}}</string>
 				<int key="NSWTFlags">1954021376</int>
-				<string key="NSWindowTitle">ZWEmojiTestApp</string>
+				<string key="NSWindowTitle">Emoji</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
@@ -1323,7 +1323,7 @@
 											<string key="NSFrameSize">{487, 449}</string>
 											<reference key="NSSuperview" ref="137503279"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="162299525"/>
+											<reference key="NSNextKeyView" ref="379298255"/>
 											<string key="NSReuseIdentifierKey">_NS:13</string>
 											<bool key="NSEnabled">YES</bool>
 											<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
@@ -1498,6 +1498,7 @@
 									<string key="NSFrame">{{1, 119}, {223, 15}}</string>
 									<reference key="NSSuperview" ref="435630266"/>
 									<reference key="NSWindow"/>
+									<reference key="NSNextKeyView"/>
 									<string key="NSReuseIdentifierKey">_NS:60</string>
 									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 									<int key="NSsFlags">1</int>
@@ -1524,7 +1525,7 @@
 							<string key="NSFrame">{{-1, 0}, {487, 466}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="137503279"/>
+							<reference key="NSNextKeyView" ref="162299525"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<int key="NSsFlags">133680</int>
 							<reference key="NSVScroller" ref="379298255"/>

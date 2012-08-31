@@ -164,7 +164,7 @@
 				92DE0C2E15F1093C00C47BC4 /* ZWEmoji.m */,
 			);
 			name = ZWEmoji;
-			path = ZWEmojiTestApp/lib;
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

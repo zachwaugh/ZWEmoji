@@ -3,7 +3,8 @@
 require 'rubygems'
 require 'sqlite3'
 
-DB = SQLite3::Database.new('emoji_db_mountain_lion.sqlite')
+DIR = File.dirname(__FILE__)
+DB = SQLite3::Database.new(DIR + '/../data/emoji.sqlite')
 
 show_missing = ARGV.include?('-m')
 skip_output = ARGV.include?('-s')
