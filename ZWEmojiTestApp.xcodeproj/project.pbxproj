@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		92DE0BF915F107F600C47BC4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DE0BF815F107F600C47BC4 /* Cocoa.framework */; };
+		92DE0C0315F107F600C47BC4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92DE0C0115F107F600C47BC4 /* InfoPlist.strings */; };
+		92DE0C0515F107F600C47BC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE0C0415F107F600C47BC4 /* main.m */; };
+		92DE0C0915F107F600C47BC4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 92DE0C0715F107F600C47BC4 /* Credits.rtf */; };
+		92DE0C0C15F107F600C47BC4 /* ZWEmojiAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE0C0B15F107F600C47BC4 /* ZWEmojiAppDelegate.m */; };
+		92DE0C0F15F107F600C47BC4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92DE0C0D15F107F600C47BC4 /* MainMenu.xib */; };
+		92DE0C1715F107F600C47BC4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DE0C1615F107F600C47BC4 /* SenTestingKit.framework */; };
+		92DE0C1815F107F600C47BC4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DE0BF815F107F600C47BC4 /* Cocoa.framework */; };
+		92DE0C2015F107F600C47BC4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92DE0C1E15F107F600C47BC4 /* InfoPlist.strings */; };
+		92DE0C2315F107F600C47BC4 /* ZWEmojiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE0C2215F107F600C47BC4 /* ZWEmojiTests.m */; };
+		92DE0C2F15F1093C00C47BC4 /* ZWEmoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE0C2E15F1093C00C47BC4 /* ZWEmoji.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92DE0C1915F107F600C47BC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92DE0BEB15F107F600C47BC4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92DE0BF315F107F600C47BC4;
+			remoteInfo = ZWEmoji;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		92DE0BF415F107F600C47BC4 /* ZWEmojiTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWEmojiTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92DE0BF815F107F600C47BC4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		92DE0BFB15F107F600C47BC4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		92DE0BFC15F107F600C47BC4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		92DE0BFD15F107F600C47BC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		92DE0C0015F107F600C47BC4 /* ZWEmojiTestApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZWEmojiTestApp-Info.plist"; sourceTree = "<group>"; };
+		92DE0C0215F107F600C47BC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		92DE0C0415F107F600C47BC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		92DE0C0615F107F600C47BC4 /* ZWEmojiTestApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZWEmojiTestApp-Prefix.pch"; sourceTree = "<group>"; };
+		92DE0C0815F107F600C47BC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		92DE0C0A15F107F600C47BC4 /* ZWEmojiAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWEmojiAppDelegate.h; sourceTree = "<group>"; };
+		92DE0C0B15F107F600C47BC4 /* ZWEmojiAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWEmojiAppDelegate.m; sourceTree = "<group>"; };
+		92DE0C0E15F107F600C47BC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		92DE0C1515F107F600C47BC4 /* ZWEmojiTestAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZWEmojiTestAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92DE0C1615F107F600C47BC4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		92DE0C1D15F107F600C47BC4 /* ZWEmojiTestAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZWEmojiTestAppTests-Info.plist"; sourceTree = "<group>"; };
+		92DE0C1F15F107F600C47BC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		92DE0C2115F107F600C47BC4 /* ZWEmojiTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWEmojiTests.h; sourceTree = "<group>"; };
+		92DE0C2215F107F600C47BC4 /* ZWEmojiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWEmojiTests.m; sourceTree = "<group>"; };
+		92DE0C2D15F1093C00C47BC4 /* ZWEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWEmoji.h; sourceTree = "<group>"; };
+		92DE0C2E15F1093C00C47BC4 /* ZWEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWEmoji.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92DE0BF115F107F600C47BC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92DE0BF915F107F600C47BC4 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92DE0C1115F107F600C47BC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92DE0C1715F107F600C47BC4 /* SenTestingKit.framework in Frameworks */,
+				92DE0C1815F107F600C47BC4 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		92DE0BE915F107F600C47BC4 = {
+			isa = PBXGroup;
+			children = (
+				92DE0C2C15F1090000C47BC4 /* ZWEmoji */,
+				92DE0BFE15F107F600C47BC4 /* ZWEmojiTestApp */,
+				92DE0C1B15F107F600C47BC4 /* ZWEmojiTests */,
+				92DE0BF715F107F600C47BC4 /* Frameworks */,
+				92DE0BF515F107F600C47BC4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		92DE0BF515F107F600C47BC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92DE0BF415F107F600C47BC4 /* ZWEmojiTestApp.app */,
+				92DE0C1515F107F600C47BC4 /* ZWEmojiTestAppTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92DE0BF715F107F600C47BC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92DE0BF815F107F600C47BC4 /* Cocoa.framework */,
+				92DE0C1615F107F600C47BC4 /* SenTestingKit.framework */,
+				92DE0BFA15F107F600C47BC4 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92DE0BFA15F107F600C47BC4 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92DE0BFB15F107F600C47BC4 /* AppKit.framework */,
+				92DE0BFC15F107F600C47BC4 /* CoreData.framework */,
+				92DE0BFD15F107F600C47BC4 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		92DE0BFE15F107F600C47BC4 /* ZWEmojiTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				92DE0C0A15F107F600C47BC4 /* ZWEmojiAppDelegate.h */,
+				92DE0C0B15F107F600C47BC4 /* ZWEmojiAppDelegate.m */,
+				92DE0C0D15F107F600C47BC4 /* MainMenu.xib */,
+				92DE0BFF15F107F600C47BC4 /* Supporting Files */,
+			);
+			path = ZWEmojiTestApp;
+			sourceTree = "<group>";
+		};
+		92DE0BFF15F107F600C47BC4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				92DE0C0015F107F600C47BC4 /* ZWEmojiTestApp-Info.plist */,
+				92DE0C0115F107F600C47BC4 /* InfoPlist.strings */,
+				92DE0C0415F107F600C47BC4 /* main.m */,
+				92DE0C0615F107F600C47BC4 /* ZWEmojiTestApp-Prefix.pch */,
+				92DE0C0715F107F600C47BC4 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		92DE0C1B15F107F600C47BC4 /* ZWEmojiTests */ = {
+			isa = PBXGroup;
+			children = (
+				92DE0C2115F107F600C47BC4 /* ZWEmojiTests.h */,
+				92DE0C2215F107F600C47BC4 /* ZWEmojiTests.m */,
+				92DE0C1C15F107F600C47BC4 /* Supporting Files */,
+			);
+			path = ZWEmojiTests;
+			sourceTree = "<group>";
+		};
+		92DE0C1C15F107F600C47BC4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				92DE0C1D15F107F600C47BC4 /* ZWEmojiTestAppTests-Info.plist */,
+				92DE0C1E15F107F600C47BC4 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		92DE0C2C15F1090000C47BC4 /* ZWEmoji */ = {
+			isa = PBXGroup;
+			children = (
+				92DE0C2D15F1093C00C47BC4 /* ZWEmoji.h */,
+				92DE0C2E15F1093C00C47BC4 /* ZWEmoji.m */,
+			);
+			name = ZWEmoji;
+			path = ZWEmojiTestApp/lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92DE0BF315F107F600C47BC4 /* ZWEmojiTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92DE0C2615F107F600C47BC4 /* Build configuration list for PBXNativeTarget "ZWEmojiTestApp" */;
+			buildPhases = (
+				92DE0BF015F107F600C47BC4 /* Sources */,
+				92DE0BF115F107F600C47BC4 /* Frameworks */,
+				92DE0BF215F107F600C47BC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZWEmojiTestApp;
+			productName = ZWEmoji;
+			productReference = 92DE0BF415F107F600C47BC4 /* ZWEmojiTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		92DE0C1415F107F600C47BC4 /* ZWEmojiTestAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92DE0C2915F107F600C47BC4 /* Build configuration list for PBXNativeTarget "ZWEmojiTestAppTests" */;
+			buildPhases = (
+				92DE0C1015F107F600C47BC4 /* Sources */,
+				92DE0C1115F107F600C47BC4 /* Frameworks */,
+				92DE0C1215F107F600C47BC4 /* Resources */,
+				92DE0C1315F107F600C47BC4 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92DE0C1A15F107F600C47BC4 /* PBXTargetDependency */,
+			);
+			name = ZWEmojiTestAppTests;
+			productName = ZWEmojiTests;
+			productReference = 92DE0C1515F107F600C47BC4 /* ZWEmojiTestAppTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92DE0BEB15F107F600C47BC4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ZWEmoji;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Zach Waugh";
+			};
+			buildConfigurationList = 92DE0BEE15F107F600C47BC4 /* Build configuration list for PBXProject "ZWEmojiTestApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 92DE0BE915F107F600C47BC4;
+			productRefGroup = 92DE0BF515F107F600C47BC4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92DE0BF315F107F600C47BC4 /* ZWEmojiTestApp */,
+				92DE0C1415F107F600C47BC4 /* ZWEmojiTestAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92DE0BF215F107F600C47BC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92DE0C0315F107F600C47BC4 /* InfoPlist.strings in Resources */,
+				92DE0C0915F107F600C47BC4 /* Credits.rtf in Resources */,
+				92DE0C0F15F107F600C47BC4 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92DE0C1215F107F600C47BC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92DE0C2015F107F600C47BC4 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		92DE0C1315F107F600C47BC4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92DE0BF015F107F600C47BC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92DE0C0515F107F600C47BC4 /* main.m in Sources */,
+				92DE0C0C15F107F600C47BC4 /* ZWEmojiAppDelegate.m in Sources */,
+				92DE0C2F15F1093C00C47BC4 /* ZWEmoji.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92DE0C1015F107F600C47BC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92DE0C2315F107F600C47BC4 /* ZWEmojiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92DE0C1A15F107F600C47BC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92DE0BF315F107F600C47BC4 /* ZWEmojiTestApp */;
+			targetProxy = 92DE0C1915F107F600C47BC4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		92DE0C0115F107F600C47BC4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92DE0C0215F107F600C47BC4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		92DE0C0715F107F600C47BC4 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92DE0C0815F107F600C47BC4 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		92DE0C0D15F107F600C47BC4 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92DE0C0E15F107F600C47BC4 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		92DE0C1E15F107F600C47BC4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92DE0C1F15F107F600C47BC4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		92DE0C2415F107F600C47BC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		92DE0C2515F107F600C47BC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		92DE0C2715F107F600C47BC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZWEmojiTestApp/ZWEmojiTestApp-Prefix.pch";
+				INFOPLIST_FILE = "ZWEmojiTestApp/ZWEmojiTestApp-Info.plist";
+				PRODUCT_NAME = ZWEmojiTestApp;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		92DE0C2815F107F600C47BC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZWEmojiTestApp/ZWEmojiTestApp-Prefix.pch";
+				INFOPLIST_FILE = "ZWEmojiTestApp/ZWEmojiTestApp-Info.plist";
+				PRODUCT_NAME = ZWEmojiTestApp;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		92DE0C2A15F107F600C47BC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZWEmojiTestApp.app/Contents/MacOS/ZWEmojiTestApp";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZWEmojiTestApp/ZWEmojiTestApp-Prefix.pch";
+				INFOPLIST_FILE = "ZWEmojiTests/ZWEmojiTestAppTests-Info.plist";
+				PRODUCT_NAME = ZWEmojiTestAppTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		92DE0C2B15F107F600C47BC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZWEmojiTestApp.app/Contents/MacOS/ZWEmojiTestApp";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZWEmojiTestApp/ZWEmojiTestApp-Prefix.pch";
+				INFOPLIST_FILE = "ZWEmojiTests/ZWEmojiTestAppTests-Info.plist";
+				PRODUCT_NAME = ZWEmojiTestAppTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92DE0BEE15F107F600C47BC4 /* Build configuration list for PBXProject "ZWEmojiTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92DE0C2415F107F600C47BC4 /* Debug */,
+				92DE0C2515F107F600C47BC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92DE0C2615F107F600C47BC4 /* Build configuration list for PBXNativeTarget "ZWEmojiTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92DE0C2715F107F600C47BC4 /* Debug */,
+				92DE0C2815F107F600C47BC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92DE0C2915F107F600C47BC4 /* Build configuration list for PBXNativeTarget "ZWEmojiTestAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92DE0C2A15F107F600C47BC4 /* Debug */,
+				92DE0C2B15F107F600C47BC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92DE0BEB15F107F600C47BC4 /* Project object */;
+}
