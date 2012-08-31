@@ -9,41 +9,45 @@
 #import "ZWEmojiTests.h"
 #import "ZWEmoji.h"
 
-@interface NSString	(Ranges)
-
-- (NSArray *)rangesOfString:(NSString *)string;
-- (NSArray *)rangesOfString:(NSString *)string options:(NSStringCompareOptions)options;
-
-@end
-
-@implementation NSString (Ranges)
-
-- (NSArray *)rangesOfString:(NSString *)string
-{
-  return [self rangesOfString:string options:0];
-}
-
-- (NSArray *)rangesOfString:(NSString *)string options:(NSStringCompareOptions)options
-{
-  NSUInteger length = [self length];
-  NSRange range = NSMakeRange(0, length);
-  NSMutableArray *ranges = [NSMutableArray array];
-  
-  while (range.location != NSNotFound) {
-    range = [self rangeOfString:string options:options range:range];
-    
-    if (range.location != NSNotFound) {
-      [ranges addObject:[NSValue valueWithRange:range]];
-      range = NSMakeRange(range.location + range.length, length - (range.location + range.length));
-    }
-  }
-  
-  return ranges;
-}
-
-@end
-
 @implementation ZWEmojiTests
+
+- (void)testCodeForEmoji
+{
+	// Test some random emoji
+	STAssertTrue([[ZWEmoji emojiForCode:@":smile:"] isEqualToString:@"😄"], nil);
+	STAssertTrue([[ZWEmoji emojiForCode:@":moon:"] isEqualToString:@"🌙"], nil);
+	STAssertTrue([[ZWEmoji emojiForCode:@":crocodile:"] isEqualToString:@"🐊"], nil);
+	STAssertTrue([[ZWEmoji emojiForCode:@":snail:"] isEqualToString:@"🐌"], nil);
+	STAssertTrue([[ZWEmoji emojiForCode:@":smiley_cat:"] isEqualToString:@"😺"], nil);
+	STAssertTrue([[ZWEmoji emojiForCode:@":see_no_evil:"] isEqualToString:@"🙈"], nil);
+	STAssertTrue([[ZWEmoji emojiForCode:@":thumbsup:"] isEqualToString:@"👍"], nil);
+	STAssertTrue([[ZWEmoji emojiForCode:@":+1:"] isEqualToString:@"👍"], nil);
+	
+	// Make sure all emojis have a code
+	for (NSString *emoji in [ZWEmoji emojis]) {
+		STAssertNotNil([ZWEmoji codeForEmoji:emoji], nil);
+	}
+}
+
+- (void)testEmojiForCode
+{
+	// Test some random emoji
+	STAssertTrue([[ZWEmoji codeForEmoji:@"😄"] isEqualToString:@":smile:"], nil);
+	STAssertTrue([[ZWEmoji codeForEmoji:@"🌙"] isEqualToString:@":moon:"], nil);
+	STAssertTrue([[ZWEmoji codeForEmoji:@"🐊"] isEqualToString:@":crocodile:"], nil);
+	STAssertTrue([[ZWEmoji codeForEmoji:@"🐌"] isEqualToString:@":snail:"], nil);
+	STAssertTrue([[ZWEmoji codeForEmoji:@"😺"] isEqualToString:@":smiley_cat:"], nil);
+	STAssertTrue([[ZWEmoji codeForEmoji:@"🙈"] isEqualToString:@":see_no_evil:"], nil);
+	
+	// This is a special case, multiple codes have the same emoji. Emoji will only map to one code though
+	STAssertTrue([[ZWEmoji codeForEmoji:@"👍"] isEqualToString:@":+1:"] || [[ZWEmoji codeForEmoji:@"👍"] isEqualToString:@":thumbsup:"], nil);
+	
+	// Make sure all codes have an emoji
+	for (NSString *code in [ZWEmoji codes]) {
+		STAssertNotNil([ZWEmoji emojiForCode:code], nil);
+	}
+}
+
 
 // Substitute codes for unicode
 - (void)testStringSubstitution

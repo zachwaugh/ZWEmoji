@@ -10,6 +10,8 @@
 
 @interface ZWEmojiTests : SenTestCase
 
+- (void)testCodeForEmoji;
+- (void)testEmojiForCode;
 - (void)testStringSubstitution;
 - (void)testDictionarySubstitution;
 - (void)testReverseSubstitution;

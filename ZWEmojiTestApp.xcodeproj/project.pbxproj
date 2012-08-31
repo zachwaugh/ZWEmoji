@@ -392,6 +392,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZWEmojiTestApp/ZWEmojiTestApp-Prefix.pch";
 				INFOPLIST_FILE = "ZWEmojiTestApp/ZWEmojiTestApp-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = ZWEmojiTestApp;
 				WRAPPER_EXTENSION = app;
 			};
@@ -404,6 +405,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZWEmojiTestApp/ZWEmojiTestApp-Prefix.pch";
 				INFOPLIST_FILE = "ZWEmojiTestApp/ZWEmojiTestApp-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = ZWEmojiTestApp;
 				WRAPPER_EXTENSION = app;
 			};
@@ -418,6 +420,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZWEmojiTestApp/ZWEmojiTestApp-Prefix.pch";
 				INFOPLIST_FILE = "ZWEmojiTests/ZWEmojiTestAppTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = ZWEmojiTestAppTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -433,6 +436,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZWEmojiTestApp/ZWEmojiTestApp-Prefix.pch";
 				INFOPLIST_FILE = "ZWEmojiTests/ZWEmojiTestAppTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = ZWEmojiTestAppTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
