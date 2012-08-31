@@ -1,6 +1,6 @@
 # ZWEmoji
 
-ZWEmoji is a library for using emoji based on emoji codes used in Campfire/GitHub, documented here: [http://emoji-cheat-sheet.com](http://emoji-cheat-sheet.com). It can be used to go back and forth between the emoji codes and their unicode representation. This code was extracted from and currently used in [Flint](http://giantcomet.com/flint). If 
+ZWEmoji is a library for using emoji based on emoji codes used in Campfire/GitHub, documented here: [http://emoji-cheat-sheet.com](http://emoji-cheat-sheet.com). It can be used to go back and forth between the emoji codes and their unicode representation. This code was extracted from and currently used in [Flint](http://giantcomet.com/flint).
 
 ## Usage
 
@@ -8,13 +8,17 @@ All the functionality is contained in a single class `ZWEmoji`
 
 The main calls are to replace codes with unicode and vice versa.
 
-### Examples
+### Example
 
 ```
   NSString *string = @"This is a string with some emoji codes :smile: and :cry:";
-	NSString *replaced = [ZWEmoji stringByReplacingCodesInString:string];
-	NSLog(@"string: %@, replaced: %@", string, replaced);
-  // string: This is a string with some emoji codes :smile: and :cry:, replaced: This is a string with some emoji codes í ½í¸„ and í ½í¸¢
+  
+  // Convert codes to unicode
+  NSString *replaced = [ZWEmoji stringByReplacingCodesInString:string];
+  
+  // And back
+  NSString *reversed = [ZWEmoji stringByReplacingEmojiInString:replaced];
+
 ```
 
 ## Demo
