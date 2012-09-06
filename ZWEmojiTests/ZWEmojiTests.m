@@ -13,7 +13,7 @@
 
 - (void)testCodeForEmoji
 {
-	// Test some random emoji
+	// Test some random emoji and make sure the code matches the unicode representation
 	STAssertTrue([[ZWEmoji emojiForCode:@":smile:"] isEqualToString:@"😄"], nil);
 	STAssertTrue([[ZWEmoji emojiForCode:@":moon:"] isEqualToString:@"🌙"], nil);
 	STAssertTrue([[ZWEmoji emojiForCode:@":crocodile:"] isEqualToString:@"🐊"], nil);
@@ -69,31 +69,44 @@
 
 - (void)testDictionarySubstitution
 {
-  NSDictionary *dict;
-  
+  NSDictionary *dict = nil;
+  NSSet *replacedEmoji = nil;
+	
   dict = [ZWEmoji replaceCodesInString:@":+1:"];
-  NSString *string = [dict objectForKey:@"string"];
+  NSString *string = [dict objectForKey:ZWEmojiStringKey];
+	NSSet *replaced = [dict objectForKey:ZWEmojiReplacedEmojiKey];
   STAssertTrue([string isEqualToString:@"👍"], nil);
-  
+  STAssertEqualObjects(replaced, [NSSet setWithObject:@"👍"], nil);
+	
   // STAssertTrue([[ZWEmoji stringByReplacingCodesInString:@":leaves:"] isEqualToString:@"🍃"], nil);
   dict = [ZWEmoji replaceCodesInString:@":leaves:"];
-  string = [dict objectForKey:@"string"];
+  string = [dict objectForKey:ZWEmojiStringKey];
+	replaced = [dict objectForKey:ZWEmojiReplacedEmojiKey];
   STAssertTrue([string isEqualToString:@"🍃"], nil);
+	STAssertEqualObjects(replaced, [NSSet setWithObject:@"🍃"], nil);
   
   // STAssertTrue([[ZWEmoji stringByReplacingCodesInString:@":leaves: and :lipstick:"] isEqualToString:@"🍃 and 💄"], nil);
   dict = [ZWEmoji replaceCodesInString:@":leaves: and :lipstick:"];
-  string = [dict objectForKey:@"string"];
+  string = [dict objectForKey:ZWEmojiStringKey];
+	replaced = [dict objectForKey:ZWEmojiReplacedEmojiKey];
+	replacedEmoji = [NSSet setWithObjects:@"🍃", @"💄", nil];
   STAssertTrue([string isEqualToString:@"🍃 and 💄"], nil);
-  
+  STAssertEqualObjects(replaced, replacedEmoji, @"");
+	
   // STAssertTrue([[ZWEmoji stringByReplacingCodesInString:@"thumbs up :+1: and thumbs down :-1:"] isEqualToString:@"thumbs up 👍 and thumbs down 👎"], nil);
   dict = [ZWEmoji replaceCodesInString:@"thumbs up :+1: and thumbs down :-1:"];
-  string = [dict objectForKey:@"string"];
+  string = [dict objectForKey:ZWEmojiStringKey];
+	replaced = [dict objectForKey:ZWEmojiReplacedEmojiKey];
+	replacedEmoji = [NSSet setWithObjects:@"👍", @"👎", nil];
   STAssertTrue([string isEqualToString:@"thumbs up 👍 and thumbs down 👎"], nil);
-  
+	STAssertEqualObjects(replaced, replacedEmoji, nil);
+	
   // STAssertTrue([[ZWEmoji stringByReplacingCodesInString:@":heart::heart::heart::heart::heart::heart:"] isEqualToString:@"❤❤❤❤❤❤"], nil);
   dict = [ZWEmoji replaceCodesInString:@":heart::heart::heart::heart::heart::heart:"];
-  string = [dict objectForKey:@"string"];
+  string = [dict objectForKey:ZWEmojiStringKey];
+	replaced = [dict objectForKey:ZWEmojiReplacedEmojiKey];
   STAssertTrue([string isEqualToString:@"❤❤❤❤❤❤"], nil);
+	STAssertEqualObjects(replaced, [NSSet setWithObject:@"❤"], nil);
 }
 
 // Replace unicode with code

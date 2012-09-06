@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString * const ZWEmojiStringKey;
+extern NSString * const ZWEmojiReplacedEmojiKey;
+
 @interface ZWEmoji : NSObject
 
 // Dictionary keyed by :<code>:
