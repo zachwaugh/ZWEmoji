@@ -18,11 +18,7 @@
 @implementation ZWEmojiAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-	NSString *string = @"This is a string with some emoji codes :smile: and :cry:";
-	NSString *replaced = [ZWEmoji stringByReplacingCodesInString:string];
-	NSLog(@"string: %@, replaced: %@", string, replaced);
-	
+{	
 	// This is just for displaying in the demo table view, not needed to use the library
 	NSMutableArray *emojis = [NSMutableArray array];
 	NSDictionary *codes = [ZWEmoji codes];

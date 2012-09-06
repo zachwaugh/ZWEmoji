@@ -9,8 +9,7 @@ DB = SQLite3::Database.new(DIR + '/../data/emoji.sqlite')
 show_missing = ARGV.include?('-m')
 skip_output = ARGV.include?('-s')
 
-codes = "_codes = @{\n"
-emojis = "_emojis = @{\n"
+codes = "[NSDictionary dictionaryWithObjectsAndKeys:\n"
 
 rows = DB.execute('SELECT * FROM emoji ORDER BY code ASC');
 
@@ -47,20 +46,18 @@ rows.each do |row|
     exit()
   end
   
-  emojis << "#{objc} : #{code},\n"
-  codes << "#{code} : #{objc},\n"
+  codes << "#{objc}, #{code},\n"
+  # New dictionary literal syntax
+  # codes << "#{code} : #{objc},\n"
 end
 
-codes << "};"
-emojis << "};"
+codes << "nil];"
+# codes << "};"
 
 if !skip_output
  puts codes
  puts
 end
-
-# puts "\n"
-# puts emojis
 
 if show_missing
   puts "---\nMissing emoji (#{missing.count}):"
