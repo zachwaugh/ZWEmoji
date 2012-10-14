@@ -134,4 +134,18 @@
   STAssertTrue([[ZWEmoji stringByReplacingEmojiInString:@"\u2122 and 👍" ignore:ignore] isEqualToString:@"\u2122 and 👍"], nil);
 }
 
+- (void)testMissing
+{
+	// These don't have unicode equivalent
+	STAssertTrue([[ZWEmoji stringByReplacingCodesInString:@":trollface:"] isEqualToString:@":trollface:"], nil);
+	STAssertTrue([[ZWEmoji emojiForCode:@":trollface:"] isEqualToString:@":trollface:"], nil);
+	
+	NSDictionary *dict = [ZWEmoji replaceCodesInString:@":+1: :trollface:"];
+  NSString *string = [dict objectForKey:ZWEmojiStringKey];
+	NSSet *replaced = [dict objectForKey:ZWEmojiReplacedEmojiKey];
+  STAssertTrue([string isEqualToString:@"👍 :trollface:"], nil);
+	NSSet *replacedSet = [NSSet setWithObjects:@"👍", @":trollface:", nil];
+  STAssertEqualObjects(replaced, replacedSet, nil);
+}
+
 @end

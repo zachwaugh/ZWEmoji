@@ -15,5 +15,6 @@
 - (void)testStringSubstitution;
 - (void)testDictionarySubstitution;
 - (void)testReverseSubstitution;
+- (void)testMissing;
 
 @end

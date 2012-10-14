@@ -20,15 +20,13 @@ rows.each do |row|
   
   code = "@\":#{raw_code}:\""
   unicode = row[2]
-  
-  if unicode.nil?
-    missing << raw_code
-    next
-  end
 
   objc = ""
 
-  if unicode.length == 5
+  if unicode.nil?
+    objc = code
+    missing << code
+  elsif unicode.length == 5
     objc = "@\"\\U000#{unicode}\""
   elsif unicode.length == 4
     objc = "@\"\\u#{unicode}\""
