@@ -9,7 +9,7 @@ DB = SQLite3::Database.new(DIR + '/../data/emoji.sqlite')
 show_missing = ARGV.include?('-m')
 skip_output = ARGV.include?('-s')
 
-codes = "[NSDictionary dictionaryWithObjectsAndKeys:\n"
+codes = "[[NSDictionary alloc] initWithObjectsAndKeys:\n"
 
 rows = DB.execute('SELECT * FROM emoji ORDER BY code ASC');
 

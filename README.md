@@ -27,7 +27,7 @@ There is a demo app that displays all the emoji and their codes in a table, and 
 
 ## Data
 
-There is a sqlite database that stores all the emoji codes along with their unicode representation in data/emoji.db, and a script to export that to Objective-C in scripts/export.rb.
+There is a sqlite database that stores all the emoji codes along with their unicode representation in data/emoji.db, and a script to export that to Objective-C in scripts/export.rb. Currently, exporting involves exporting to the clipboard and pasting into ZWEmoji.m to replace the dictionary. Should probably export to a separate data file that gets loaded at runtime, but this is simpler for now.
 
 ## To Do
 
@@ -55,6 +55,8 @@ There are currently 18 emoji listed in [emoji cheat sheet](http://emoji-cheat-sh
 - squirrel
 - suspect
 - trollface
+
+They're still included in the library, but are just replaced with themselves, so you can replace them with images if you want.
 
 ## License
 
