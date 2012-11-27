@@ -22,6 +22,7 @@
 	STAssertTrue([[ZWEmoji emojiForCode:@":see_no_evil:"] isEqualToString:@"🙈"], nil);
 	STAssertTrue([[ZWEmoji emojiForCode:@":thumbsup:"] isEqualToString:@"👍"], nil);
 	STAssertTrue([[ZWEmoji emojiForCode:@":+1:"] isEqualToString:@"👍"], nil);
+  STAssertTrue([[ZWEmoji emojiForCode:@":white_check_mark:"] isEqualToString:@"✅"], nil);
 	
 	// Make sure all emojis have a code
 	for (NSString *emoji in [ZWEmoji emojis]) {

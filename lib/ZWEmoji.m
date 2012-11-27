@@ -925,6 +925,7 @@ static NSDictionary *_codes = nil;
             @"\U0001F433", @":whale:",
             @"\U0001F40B", @":whale2:",
             @"\u267F", @":wheelchair:",
+            @"\u2705", @":white_check_mark:",
             @"\u26AA", @":white_circle:",
             @"\U0001F4AE", @":white_flower:",
             @"\u2B1C", @":white_square:",
