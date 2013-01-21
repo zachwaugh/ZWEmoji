@@ -44,15 +44,19 @@ static NSDictionary *_codes = nil;
 
 + (NSString *)stringByReplacingEmojiInString:(NSString *)string ignore:(NSSet *)ignore
 {
-  NSMutableString *emojiString = [string mutableCopy];
-  
-  for (NSString *emoji in _emojis) {
-    if (![ignore containsObject:emoji]) {
-      [emojiString replaceOccurrencesOfString:emoji withString:[_emojis objectForKey:emoji] options:NSCaseInsensitiveSearch range:NSMakeRange(0, [emojiString length])];
+    if (![string isEqual:[NSNull null]] && [string length]) {
+
+        NSMutableString *emojiString = [string mutableCopy];
+
+        for (NSString *emoji in _emojis) {
+            if (![ignore containsObject:emoji]) {
+                [emojiString replaceOccurrencesOfString:emoji withString:[_emojis objectForKey:emoji] options:NSCaseInsensitiveSearch range:NSMakeRange(0, [emojiString length])];
+            }
+        }
+
+        return emojiString;
     }
-  }
-  
-  return emojiString;
+    return string;
 }
 
 // Replace codes (:thumbsup:) with emoji unicode (\U0001F44D)
