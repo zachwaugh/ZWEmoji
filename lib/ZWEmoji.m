@@ -58,9 +58,11 @@ static NSDictionary *_codes = nil;
 // Replace codes (:thumbsup:) with emoji unicode (\U0001F44D)
 + (NSString *)stringByReplacingCodesInString:(NSString *)string
 {
-	NSDictionary *dict = [ZWEmoji replaceCodesInString:string];
-	
-	return [dict objectForKey:ZWEmojiStringKey];
+    if (![string isEqual:[NSNull null]] && [string length]) {
+        NSDictionary *dict = [ZWEmoji replaceCodesInString:string];
+        return [dict objectForKey:ZWEmojiStringKey];
+    }
+    return string;
 }
 
 // More info, returns string and a list of the all the emoji that were replaced
