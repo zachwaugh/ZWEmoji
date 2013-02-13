@@ -32,6 +32,8 @@
 	}];
 		
 	self.emojis = emojis;
+  
+  self.window.title = [NSString stringWithFormat:@"%ld Emojis", self.emojis.count];
 	
 	[self.tableView reloadData];
 }
