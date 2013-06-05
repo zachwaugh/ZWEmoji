@@ -1,31 +1,32 @@
 #!/usr/bin/env ruby -w
 
 require 'rubygems'
-require 'sqlite3'
 
 DIR = File.dirname(__FILE__)
-DB = SQLite3::Database.new(DIR + '/../data/emoji.sqlite')
+
+rows = File.open(DIR + '/../data/emoji.csv').readlines
+rows.shift # First row is column names, ignore that
 
 show_missing = ARGV.include?('-m')
 skip_output = ARGV.include?('-s')
 
-codes = "[[NSDictionary alloc] initWithObjectsAndKeys:\n"
+# build up NSDictionary of codes -> unicode
+nsdictionary = "@{"
 
-rows = DB.execute('SELECT * FROM emoji ORDER BY code ASC');
-
+# emoji codes that don't have a unicode representation
 missing = []
 
 rows.each do |row|
-  raw_code = row[0].chomp
-  
+  parts = row.chomp.split(',')
+  raw_code = parts[0].strip
   code = "@\":#{raw_code}:\""
-  unicode = row[2]
+  unicode = parts[1].nil? ? nil : parts[1].strip
 
   objc = ""
 
   if unicode.nil?
     objc = code
-    missing << code
+    missing << raw_code
   elsif unicode.length == 5
     objc = "@\"\\U000#{unicode}\""
   elsif unicode.length == 4
@@ -44,16 +45,13 @@ rows.each do |row|
     exit()
   end
   
-  codes << "#{objc}, #{code},\n"
-  # New dictionary literal syntax
-  # codes << "#{code} : #{objc},\n"
+  nsdictionary << "#{code} : #{objc},\n"
 end
 
-codes << "nil];"
-# codes << "};"
+nsdictionary << "};"
 
 if !skip_output
- puts codes
+ puts nsdictionary
  puts
 end
 

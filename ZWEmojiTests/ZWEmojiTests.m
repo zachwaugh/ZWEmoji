@@ -24,6 +24,8 @@
 	STAssertTrue([[ZWEmoji emojiForCode:@":+1:"] isEqualToString:@"👍"], nil);
   STAssertTrue([[ZWEmoji emojiForCode:@":white_check_mark:"] isEqualToString:@"✅"], nil);
   STAssertTrue([[ZWEmoji emojiForCode:@":worried:"] isEqualToString:@"😟"], nil);
+	STAssertTrue([[ZWEmoji emojiForCode:@":aerial_tramway:"] isEqualToString:@"🚡"], nil);
+	STAssertTrue([[ZWEmoji emojiForCode:@":hamburger:"] isEqualToString:@"🍔"], nil);
 	
 	// Make sure all emojis have a code
 	for (NSString *emoji in [ZWEmoji emojis]) {
@@ -40,6 +42,7 @@
 	STAssertTrue([[ZWEmoji codeForEmoji:@"🐌"] isEqualToString:@":snail:"], nil);
 	STAssertTrue([[ZWEmoji codeForEmoji:@"😺"] isEqualToString:@":smiley_cat:"], nil);
 	STAssertTrue([[ZWEmoji codeForEmoji:@"🙈"] isEqualToString:@":see_no_evil:"], nil);
+	STAssertTrue([[ZWEmoji codeForEmoji:@"🍔"] isEqualToString:@":hamburger:"], nil);
 	
 	// This is a special case, multiple codes have the same emoji. Emoji will only map to one code though
 	STAssertTrue([[ZWEmoji codeForEmoji:@"👍"] isEqualToString:@":+1:"] || [[ZWEmoji codeForEmoji:@"👍"] isEqualToString:@":thumbsup:"], nil);
