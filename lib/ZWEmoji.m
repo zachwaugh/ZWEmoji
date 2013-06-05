@@ -28,18 +28,18 @@ static NSDictionary *_codes = nil;
 
 + (NSString *)codeForEmoji:(NSString *)emoji
 {
-  return [_emojis objectForKey:emoji];
+	return [_emojis objectForKey:emoji];
 }
 
 + (NSString *)emojiForCode:(NSString *)code
 {
-  return [_codes objectForKey:code];
+	return [_codes objectForKey:code];
 }
 
 // Replace emoji unicode (\U0001F44D) with Campfire codes (:thumbsup:)
 + (NSString *)stringByReplacingEmojiInString:(NSString *)string
 {
-  return [self stringByReplacingEmojiInString:string ignore:nil];
+	return [self stringByReplacingEmojiInString:string ignore:nil];
 }
 
 + (NSString *)stringByReplacingEmojiInString:(NSString *)string ignore:(NSSet *)ignore
@@ -72,31 +72,31 @@ static NSDictionary *_codes = nil;
 // More info, returns string and a list of the all the emoji that were replaced
 + (NSDictionary *)replaceCodesInString:(NSString *)string
 {
-  // Return right away if no emoji codes in string
-  if ([string rangeOfString:@":"].location == NSNotFound) {
+	// Return right away if no emoji codes in string
+	if ([string rangeOfString:@":"].location == NSNotFound) {
 		return [NSDictionary dictionaryWithObject:string forKey:ZWEmojiStringKey];
-  }
-  
-	NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@":[a-z0-9_+-]+:" options:NSRegularExpressionCaseInsensitive error:nil];
-  NSArray *matches = [regex matchesInString:string options:0 range:NSMakeRange(0, [string length])];
+	}
 	
-  NSMutableString *emojiString = [string mutableCopy];
-  NSMutableSet *replacedEmoji = [NSMutableSet set];
-  
+	NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@":[a-z0-9_+-]+:" options:NSRegularExpressionCaseInsensitive error:nil];
+	NSArray *matches = [regex matchesInString:string options:0 range:NSMakeRange(0, [string length])];
+	
+	NSMutableString *emojiString = [string mutableCopy];
+	NSMutableSet *replacedEmoji = [NSMutableSet set];
+	
 	// Loop through matches in reverse order so the ranges won't be affected
-  for (NSTextCheckingResult *match in [matches reverseObjectEnumerator]) {
-    NSString *word = [string substringWithRange:match.range];
-    NSString *emoji = [ZWEmoji emojiForCode:word];
-    
+	for (NSTextCheckingResult *match in [matches reverseObjectEnumerator]) {
+		NSString *word = [string substringWithRange:match.range];
+		NSString *emoji = [ZWEmoji emojiForCode:word];
+		
 		if (emoji) {
-      if (![replacedEmoji containsObject:emoji]) {
-        [replacedEmoji addObject:emoji];
-      }
-      
-      [emojiString replaceCharactersInRange:match.range withString:emoji];
-    }
-  }
-  
+			if (![replacedEmoji containsObject:emoji]) {
+				[replacedEmoji addObject:emoji];
+			}
+			
+			[emojiString replaceCharactersInRange:match.range withString:emoji];
+		}
+	}
+	
 	return [NSDictionary dictionaryWithObjectsAndKeys:emojiString, ZWEmojiStringKey, replacedEmoji, ZWEmojiReplacedEmojiKey, nil];
 }
 
@@ -974,9 +974,6 @@ static NSDictionary *_codes = nil;
             @"\u26A1", @":zap:",
             @"\U0001F4A4", @":zzz:",
             nil];
-
-
-  
 	
 	// Build dictionary keyed by unicode representation for easy replacement
 	NSMutableDictionary *emojis = [[NSMutableDictionary alloc] init];
