@@ -726,7 +726,8 @@ static NSRegularExpression *_regex = nil;
 						@":rage4:" : @":rage4:",
 						@":railway_car:" : @"\U0001F683",
 						@":rainbow:" : @"\U0001F308",
-						@":raised_hand:" : @"\U0001F64B",
+						@":raised_hand:" : @"\u270B",
+						@":raising_hand:" : @"\U0001F64B",
 						@":raised_hands:" : @"\U0001F64C",
 						@":ram:" : @"\U0001F40F",
 						@":ramen:" : @"\U0001F35C",
@@ -975,6 +976,7 @@ static NSRegularExpression *_regex = nil;
 						@":yum:" : @"\U0001F60B",
 						@":zap:" : @"\u26A1",
 						@":zzz:" : @"\U0001F4A4"};
+	
 	
 	// Build dictionary keyed by unicode representation for easy replacement
 	NSMutableDictionary *emojis = [[NSMutableDictionary alloc] init];
