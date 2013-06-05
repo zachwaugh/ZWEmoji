@@ -27,11 +27,12 @@ There is a demo app that displays all the emoji and their codes in a table, and 
 
 ## Data
 
-There is a sqlite database that stores all the emoji codes along with their unicode representation in data/emoji.db, and a script to export that to Objective-C in scripts/export.rb. Currently, exporting involves exporting to the clipboard and pasting into ZWEmoji.m to replace the dictionary. Should probably export to a separate data file that gets loaded at runtime, but this is simpler for now.
+There is a CSV file that stores all the emoji codes along with their unicode representation in data/emoji.csv, and a script to export that to Objective-C in scripts/export.rb. Currently, exporting involves exporting to the clipboard and pasting into ZWEmoji.m to replace the dictionary. Should probably export to a separate data file that gets loaded at runtime, but this is simpler for now.
 
 ## To Do
 
-On [emoji cheat sheet](http://emoji-cheat-sheet.com) and in OS X emoji picker (Edit > Special Characters > Emoji in almost any text editor), the emoji are grouped by category. I want to add those categories to the database.
+- On [emoji cheat sheet](http://emoji-cheat-sheet.com) and in OS X emoji picker (Edit > Special Characters > Emoji in almost any text editor), the emoji are grouped by category. I want to add those categories to the database.
+- Write a script to compare against [emoji cheat sheet](http://emoji-cheat-sheet.com) and [Gemoji](http://github.com/github/gemoji) to ensure we have full support
 
 ## Notes
 
