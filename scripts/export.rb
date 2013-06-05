@@ -11,7 +11,7 @@ show_missing = ARGV.include?('-m')
 skip_output = ARGV.include?('-s')
 
 # build up NSDictionary of codes -> unicode
-nsdictionary = "@{"
+emoji = []
 
 # emoji codes that don't have a unicode representation
 missing = []
@@ -45,10 +45,11 @@ rows.each do |row|
     exit()
   end
   
-  nsdictionary << "#{code} : #{objc},\n"
+  emoji << "#{code}: #{objc}"
 end
 
-nsdictionary << "};"
+dict = emoji.join(",\n")
+nsdictionary = "@{#{dict}};"
 
 if !skip_output
  puts nsdictionary

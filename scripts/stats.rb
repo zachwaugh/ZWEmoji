@@ -7,9 +7,6 @@ DIR = File.dirname(__FILE__)
 rows = File.open(DIR + '/../data/emoji.csv').readlines
 rows.shift # First row is column names, ignore that
 
-show_missing = ARGV.include?('-m')
-skip_output = ARGV.include?('-s')
-
 # emoji codes that don't have a unicode representation
 missing = []
 emoji = []
