@@ -13,6 +13,7 @@ NSString * const ZWEmojiReplacedEmojiKey = @"emojis";
 
 static NSDictionary *_emojis = nil;
 static NSDictionary *_codes = nil;
+static NSRegularExpression *_regex = nil;
 
 @implementation ZWEmoji
 
@@ -77,8 +78,10 @@ static NSDictionary *_codes = nil;
 		return [NSDictionary dictionaryWithObject:string forKey:ZWEmojiStringKey];
 	}
 	
-	NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@":[a-z0-9_+-]+:" options:NSRegularExpressionCaseInsensitive error:nil];
-	NSArray *matches = [regex matchesInString:string options:0 range:NSMakeRange(0, [string length])];
+	if (!_regex) {
+		_regex = [NSRegularExpression regularExpressionWithPattern:@":[a-z0-9_+-]+:" options:NSRegularExpressionCaseInsensitive error:nil];
+	}
+	NSArray *matches = [_regex matchesInString:string options:0 range:NSMakeRange(0, [string length])];
 	
 	NSMutableString *emojiString = [string mutableCopy];
 	NSMutableSet *replacedEmoji = [NSMutableSet set];
