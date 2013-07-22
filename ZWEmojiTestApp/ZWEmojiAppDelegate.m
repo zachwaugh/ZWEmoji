@@ -38,6 +38,15 @@
 	[self.tableView reloadData];
 }
 
+#pragma mark - NSTextViewDelegate
+
+- (void)textDidChange:(NSNotification *)aNotification
+{
+	NSTextView *textView = aNotification.object;
+	NSString *newString = [ZWEmoji stringByReplacingCodesInString:textView.string];
+	textView.string = newString;
+}
+
 #pragma mark - Table view delegate/data source
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
