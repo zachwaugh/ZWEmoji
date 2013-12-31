@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		921386BF1873828400B1DBE2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921386BE1873828300B1DBE2 /* XCTest.framework */; };
 		92DE0BF915F107F600C47BC4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DE0BF815F107F600C47BC4 /* Cocoa.framework */; };
 		92DE0C0315F107F600C47BC4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92DE0C0115F107F600C47BC4 /* InfoPlist.strings */; };
 		92DE0C0515F107F600C47BC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE0C0415F107F600C47BC4 /* main.m */; };
 		92DE0C0915F107F600C47BC4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 92DE0C0715F107F600C47BC4 /* Credits.rtf */; };
 		92DE0C0C15F107F600C47BC4 /* ZWEmojiAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE0C0B15F107F600C47BC4 /* ZWEmojiAppDelegate.m */; };
 		92DE0C0F15F107F600C47BC4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92DE0C0D15F107F600C47BC4 /* MainMenu.xib */; };
-		92DE0C1715F107F600C47BC4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DE0C1615F107F600C47BC4 /* SenTestingKit.framework */; };
 		92DE0C1815F107F600C47BC4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DE0BF815F107F600C47BC4 /* Cocoa.framework */; };
 		92DE0C2015F107F600C47BC4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92DE0C1E15F107F600C47BC4 /* InfoPlist.strings */; };
 		92DE0C2315F107F600C47BC4 /* ZWEmojiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DE0C2215F107F600C47BC4 /* ZWEmojiTests.m */; };
@@ -31,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		921386BE1873828300B1DBE2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		92DE0BF415F107F600C47BC4 /* ZWEmojiTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWEmojiTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DE0BF815F107F600C47BC4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		92DE0BFB15F107F600C47BC4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -44,8 +45,7 @@
 		92DE0C0A15F107F600C47BC4 /* ZWEmojiAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWEmojiAppDelegate.h; sourceTree = "<group>"; };
 		92DE0C0B15F107F600C47BC4 /* ZWEmojiAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWEmojiAppDelegate.m; sourceTree = "<group>"; };
 		92DE0C0E15F107F600C47BC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		92DE0C1515F107F600C47BC4 /* ZWEmojiTestAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZWEmojiTestAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		92DE0C1615F107F600C47BC4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		92DE0C1515F107F600C47BC4 /* ZWEmojiTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZWEmojiTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DE0C1D15F107F600C47BC4 /* ZWEmojiTestAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZWEmojiTestAppTests-Info.plist"; sourceTree = "<group>"; };
 		92DE0C1F15F107F600C47BC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		92DE0C2115F107F600C47BC4 /* ZWEmojiTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWEmojiTests.h; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92DE0C1715F107F600C47BC4 /* SenTestingKit.framework in Frameworks */,
+				921386BF1873828400B1DBE2 /* XCTest.framework in Frameworks */,
 				92DE0C1815F107F600C47BC4 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,7 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				92DE0BF415F107F600C47BC4 /* ZWEmojiTestApp.app */,
-				92DE0C1515F107F600C47BC4 /* ZWEmojiTestAppTests.octest */,
+				92DE0C1515F107F600C47BC4 /* ZWEmojiTestAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,8 +98,8 @@
 		92DE0BF715F107F600C47BC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				921386BE1873828300B1DBE2 /* XCTest.framework */,
 				92DE0BF815F107F600C47BC4 /* Cocoa.framework */,
-				92DE0C1615F107F600C47BC4 /* SenTestingKit.framework */,
 				92DE0BFA15F107F600C47BC4 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -203,8 +203,8 @@
 			);
 			name = ZWEmojiTestAppTests;
 			productName = ZWEmojiTests;
-			productReference = 92DE0C1515F107F600C47BC4 /* ZWEmojiTestAppTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 92DE0C1515F107F600C47BC4 /* ZWEmojiTestAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -416,14 +416,16 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZWEmojiTestApp.app/Contents/MacOS/ZWEmojiTestApp";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZWEmojiTestApp/ZWEmojiTestApp-Prefix.pch";
 				INFOPLIST_FILE = "ZWEmojiTests/ZWEmojiTestAppTests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = ZWEmojiTestAppTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -432,14 +434,16 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZWEmojiTestApp.app/Contents/MacOS/ZWEmojiTestApp";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZWEmojiTestApp/ZWEmojiTestApp-Prefix.pch";
 				INFOPLIST_FILE = "ZWEmojiTests/ZWEmojiTestAppTests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = ZWEmojiTestAppTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

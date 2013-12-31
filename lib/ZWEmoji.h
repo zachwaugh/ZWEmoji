@@ -26,17 +26,26 @@ extern NSString * const ZWEmojiReplacedEmojiKey;
 + (NSString *)codeForEmoji:(NSString *)emoji;
 
 // Replace codes with emoji unicode characters
-+ (NSString *)stringByReplacingCodesInString:(NSString *)string;
++ (NSString *)emojify:(NSString *)string;
 
 // Returns a dictionary that holds a string and array of emojis that were replaced
+// useful if you need the ranges of all the replacements
 + (NSDictionary *)replaceCodesInString:(NSString *)string;
 
 // Replace emoji unicode characters with codes, allows users to input emoji directly
 // without having to worry about the code
-+ (NSString *)stringByReplacingEmojiInString:(NSString *)string;
++ (NSString *)unemojify:(NSString *)string;
 
 // Replace emoji unicode characters with codes, ignoring anything in ignore
 // This is useful when you don't want to replace characters like TM with their emoji equivalent
-+ (NSString *)stringByReplacingEmojiInString:(NSString *)string ignore:(NSSet *)ignore;
++ (NSString *)unemojify:(NSString *)string ignore:(NSSet *)ignore;
+
+@end
+
+// Convenience category for emojifying a string
+@interface NSString (ZWEmoji)
+
+// Returns new string with all emoji codes replaced with their unicode equivalent
+- (NSString *)zw_emojify;
 
 @end

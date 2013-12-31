@@ -43,7 +43,7 @@
 - (void)textDidChange:(NSNotification *)aNotification
 {
 	NSTextView *textView = aNotification.object;
-	NSString *newString = [ZWEmoji stringByReplacingCodesInString:textView.string];
+	NSString *newString = [ZWEmoji emojify:textView.string];
 	textView.string = newString;
 }
 
@@ -51,7 +51,7 @@
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
 {
-	return [self.emojis count];
+	return self.emojis.count;
 }
 
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
