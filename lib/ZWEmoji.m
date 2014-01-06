@@ -59,6 +59,46 @@ static NSDictionary *_codes = nil;
     return string;
 }
 
++ (NSAttributedString *)attributedStringByReplacingCodesInAttributedStringString:(NSAttributedString *)attributedString
+{
+    if (![attributedString isEqual:[NSNull null]] && [attributedString length]) {
+        NSDictionary *dict = [self replaceCodesInAttributedString:attributedString];
+        return dict[ZWEmojiStringKey];
+    }
+    return attributedString;
+}
+
++ (NSDictionary *)replaceCodesInAttributedString:(NSAttributedString *)attributedString
+{
+	// Return right away if no emoji codes in string
+	
+	if ([attributedString.string rangeOfString:@":"].location == NSNotFound) {
+		return @{ZWEmojiStringKey: attributedString};
+	}
+	
+	NSArray *matches = [self.emojiCodeRegularExpression matchesInString:attributedString.string options:0 range:NSMakeRange(0, [attributedString length])];
+	
+	NSMutableString *emojiString = [attributedString mutableCopy];
+	NSMutableSet *replacedEmoji = [NSMutableSet set];
+	
+	// Loop through matches in reverse order so the ranges won't be affected
+	for (NSTextCheckingResult *match in [matches reverseObjectEnumerator]) {
+		NSString *word = [attributedString.string substringWithRange:match.range];
+		NSString *emoji = [ZWEmoji emojiForCode:word];
+		
+		if (emoji) {
+			if (![replacedEmoji containsObject:emoji]) {
+				[replacedEmoji addObject:emoji];
+			}
+			
+			[emojiString replaceCharactersInRange:match.range withString:emoji];
+		}
+	}
+	
+	return @{ZWEmojiStringKey: emojiString, ZWEmojiReplacedEmojiKey: replacedEmoji};
+}
+
+
 // Replace codes (:thumbsup:) with emoji unicode (\U0001F44D)
 + (NSString *)stringByReplacingCodesInString:(NSString *)string
 {
