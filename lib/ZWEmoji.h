@@ -26,6 +26,12 @@ extern NSString * const ZWEmojiReplacedEmojiKey;
 + (NSString *)codeForEmoji:(NSString *)emoji;
 
 // Replace codes with emoji unicode characters
++ (NSAttributedString *)attributedStringByReplacingCodesInAttributedStringString:(NSAttributedString *)attributedString;
+
+// Returns a dictionary that holds a string and array of emojis that were replaced
++ (NSDictionary *)replaceCodesInAttributedString:(NSAttributedString *)attributedString;
+
+// Replace codes with emoji unicode characters
 + (NSString *)stringByReplacingCodesInString:(NSString *)string;
 
 // Returns a dictionary that holds a string and array of emojis that were replaced
