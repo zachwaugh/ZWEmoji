@@ -77,14 +77,14 @@ static NSDictionary *_codes = nil;
 + (NSString *)emojify:(NSString *)string
 {
     if (![string isEqual:[NSNull null]] && string.length > 0) {
-        NSDictionary *dict = [ZWEmoji replaceCodesInString:string];
+        NSDictionary *dict = [ZWEmoji emojifyAndReturnData:string];
         return dict[ZWEmojiStringKey];
     }
     return string;
 }
 
 // More info, returns string and a list of the all the emoji that were replaced
-+ (NSDictionary *)replaceCodesInString:(NSString *)string
++ (NSDictionary *)emojifyAndReturnData:(NSString *)string
 {
 	// Return right away if no emoji codes in string
 	if ([string rangeOfString:@":"].location == NSNotFound) {
@@ -109,7 +109,7 @@ static NSDictionary *_codes = nil;
 		}
 	}
 	
-	return @{ZWEmojiStringKey: emojiString, ZWEmojiReplacedEmojiKey: replacedEmoji};
+	return @{ ZWEmojiStringKey: emojiString, ZWEmojiReplacedEmojiKey: replacedEmoji };
 }
 
 #pragma mark -

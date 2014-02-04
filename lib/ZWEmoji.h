@@ -30,7 +30,7 @@ extern NSString * const ZWEmojiReplacedEmojiKey;
 
 // Returns a dictionary that holds a string and array of emojis that were replaced
 // useful if you need the ranges of all the replacements
-+ (NSDictionary *)replaceCodesInString:(NSString *)string;
++ (NSDictionary *)emojifyAndReturnData:(NSString *)string;
 
 // Replace emoji unicode characters with codes, allows users to input emoji directly
 // without having to worry about the code

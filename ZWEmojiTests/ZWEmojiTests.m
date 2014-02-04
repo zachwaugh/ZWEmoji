@@ -77,21 +77,21 @@
   NSDictionary *dict = nil;
   NSSet *replacedEmoji = nil;
 	
-  dict = [ZWEmoji replaceCodesInString:@":+1:"];
+  dict = [ZWEmoji emojifyAndReturnData:@":+1:"];
   NSString *string = [dict objectForKey:ZWEmojiStringKey];
 	NSSet *replaced = [dict objectForKey:ZWEmojiReplacedEmojiKey];
   XCTAssertTrue([string isEqualToString:@"👍"]);
   XCTAssertEqualObjects(replaced, [NSSet setWithObject:@"👍"]);
 	
   // STAssertTrue([[ZWEmoji stringByReplacingCodesInString:@":leaves:"] isEqualToString:@"🍃"], nil);
-  dict = [ZWEmoji replaceCodesInString:@":leaves:"];
+  dict = [ZWEmoji emojifyAndReturnData:@":leaves:"];
   string = [dict objectForKey:ZWEmojiStringKey];
 	replaced = [dict objectForKey:ZWEmojiReplacedEmojiKey];
   XCTAssertTrue([string isEqualToString:@"🍃"]);
 	XCTAssertEqualObjects(replaced, [NSSet setWithObject:@"🍃"]);
   
   // STAssertTrue([[ZWEmoji stringByReplacingCodesInString:@":leaves: and :lipstick:"] isEqualToString:@"🍃 and 💄"], nil);
-  dict = [ZWEmoji replaceCodesInString:@":leaves: and :lipstick:"];
+  dict = [ZWEmoji emojifyAndReturnData:@":leaves: and :lipstick:"];
   string = [dict objectForKey:ZWEmojiStringKey];
 	replaced = [dict objectForKey:ZWEmojiReplacedEmojiKey];
 	replacedEmoji = [NSSet setWithObjects:@"🍃", @"💄", nil];
@@ -99,7 +99,7 @@
   XCTAssertEqualObjects(replaced, replacedEmoji, @"");
 	
   // STAssertTrue([[ZWEmoji stringByReplacingCodesInString:@"thumbs up :+1: and thumbs down :-1:"] isEqualToString:@"thumbs up 👍 and thumbs down 👎"], nil);
-  dict = [ZWEmoji replaceCodesInString:@"thumbs up :+1: and thumbs down :-1:"];
+  dict = [ZWEmoji emojifyAndReturnData:@"thumbs up :+1: and thumbs down :-1:"];
   string = [dict objectForKey:ZWEmojiStringKey];
 	replaced = [dict objectForKey:ZWEmojiReplacedEmojiKey];
 	replacedEmoji = [NSSet setWithObjects:@"👍", @"👎", nil];
@@ -107,7 +107,7 @@
 	XCTAssertEqualObjects(replaced, replacedEmoji);
 	
   // STAssertTrue([[ZWEmoji stringByReplacingCodesInString:@":heart::heart::heart::heart::heart::heart:"] isEqualToString:@"❤❤❤❤❤❤"], nil);
-  dict = [ZWEmoji replaceCodesInString:@":heart::heart::heart::heart::heart::heart:"];
+  dict = [ZWEmoji emojifyAndReturnData:@":heart::heart::heart::heart::heart::heart:"];
   string = [dict objectForKey:ZWEmojiStringKey];
 	replaced = [dict objectForKey:ZWEmojiReplacedEmojiKey];
   XCTAssertTrue([string isEqualToString:@"❤❤❤❤❤❤"]);
@@ -145,12 +145,12 @@
 	XCTAssertTrue([[ZWEmoji emojify:@":trollface:"] isEqualToString:@":trollface:"]);
 	XCTAssertTrue([[ZWEmoji emojiForCode:@":trollface:"] isEqualToString:@":trollface:"]);
 	
-	NSDictionary *dict = [ZWEmoji replaceCodesInString:@":+1: :trollface:"];
-    NSString *string = dict[ZWEmojiStringKey];
+	NSDictionary *dict = [ZWEmoji emojifyAndReturnData:@":+1: :trollface:"];
+	NSString *string = dict[ZWEmojiStringKey];
 	NSSet *replaced = dict[ZWEmojiReplacedEmojiKey];
-    XCTAssertTrue([string isEqualToString:@"👍 :trollface:"]);
+	XCTAssertTrue([string isEqualToString:@"👍 :trollface:"]);
 	NSSet *replacedSet = [NSSet setWithObjects:@"👍", @":trollface:", nil];
-    XCTAssertEqualObjects(replaced, replacedSet);
+	XCTAssertEqualObjects(replaced, replacedSet);
 }
 
 @end
