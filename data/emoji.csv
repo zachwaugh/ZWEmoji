@@ -1,4 +1,3 @@
-code,unicode
 +1,1F44D
 -1,1F44E
 0,0030 20E3
@@ -267,6 +266,7 @@ earth_americas,1F30E
 earth_asia,1F30F
 egg,1F373
 eggplant,1F346
+eight,0038 20E3
 eight_pointed_black_star,2734
 eight_spoked_asterisk,2733
 electric_plug,1F50C
@@ -304,6 +304,7 @@ fish,1F41F
 fish_cake,1F365
 fishing_pole_and_fish,1F3A3
 fist,270A
+five,0035 20E3
 flags,1F38F
 flashlight,1F526
 floppy_disk,1F4BE
@@ -313,6 +314,7 @@ foggy,1F301
 football,1F3C8
 fork_and_knife,1F374
 fountain,26F2
+four,0034 20E3
 four_leaf_clover,1F340
 fr,1F1EB 1F1F7
 free,1F193
@@ -516,6 +518,7 @@ new_moon,1F311
 new_moon_with_face,1F31A
 newspaper,1F4F0
 ng,1F196
+nine,0039 20E3
 no_bell,1F515
 no_bicycles,1F6B3
 no_entry,26D4
@@ -548,6 +551,7 @@ oncoming_automobile,1F698
 oncoming_bus,1F68D
 oncoming_police_car,1F694
 oncoming_taxi,1F696
+one,0031 20E3
 open_file_folder,1F4C2
 open_hands,1F450
 open_mouth,1F62E
@@ -622,8 +626,8 @@ rage4,
 railway_car,1F683
 rainbow,1F308
 raised_hand,270B
-raising_hand,1F64B
 raised_hands,1F64C
+raising_hand,1F64B
 ram,1F40F
 ramen,1F35C
 rat,1F400
@@ -676,6 +680,7 @@ seat,1F4BA
 secret,3299
 see_no_evil,1F648
 seedling,1F331
+seven,0037 20E3
 shaved_ice,1F367
 sheep,1F411
 shell,1F41A
@@ -686,6 +691,7 @@ shit,1F4A9
 shoe,1F45F
 shower,1F6BF
 signal_strength,1F4F6
+six,0036 20E3
 six_pointed_star,1F52F
 ski,1F3BF
 skull,1F480
@@ -766,6 +772,7 @@ telescope,1F52D
 tennis,1F3BE
 tent,26FA
 thought_balloon,1F4AD
+three,0033 20E3
 thumbsdown,1F44E
 thumbsup,1F44D
 ticket,1F3AB
@@ -801,6 +808,7 @@ tulip,1F337
 turtle,1F422
 tv,1F4FA
 twisted_rightwards_arrows,1F500
+two,0032 20E3
 two_hearts,1F495
 two_men_holding_hands,1F46C
 two_women_holding_hands,1F46D
@@ -870,4 +878,5 @@ yellow_heart,1F49B
 yen,1F4B4
 yum,1F60B
 zap,26A1
+zero,0030 20E3
 zzz,1F4A4

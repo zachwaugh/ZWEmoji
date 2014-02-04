@@ -22,8 +22,8 @@
 	XCTAssertTrue([[ZWEmoji emojiForCode:@":see_no_evil:"] isEqualToString:@"🙈"]);
 	XCTAssertTrue([[ZWEmoji emojiForCode:@":thumbsup:"] isEqualToString:@"👍"]);
 	XCTAssertTrue([[ZWEmoji emojiForCode:@":+1:"] isEqualToString:@"👍"]);
-    XCTAssertTrue([[ZWEmoji emojiForCode:@":white_check_mark:"] isEqualToString:@"✅"]);
-    XCTAssertTrue([[ZWEmoji emojiForCode:@":worried:"] isEqualToString:@"😟"]);
+	XCTAssertTrue([[ZWEmoji emojiForCode:@":white_check_mark:"] isEqualToString:@"✅"]);
+	XCTAssertTrue([[ZWEmoji emojiForCode:@":worried:"] isEqualToString:@"😟"]);
 	XCTAssertTrue([[ZWEmoji emojiForCode:@":aerial_tramway:"] isEqualToString:@"🚡"]);
 	XCTAssertTrue([[ZWEmoji emojiForCode:@":hamburger:"] isEqualToString:@"🍔"]);
 	
@@ -53,7 +53,6 @@
 	}
 }
 
-
 // Substitute codes for unicode
 - (void)testStringSubstitution
 {
@@ -66,11 +65,10 @@
   XCTAssertTrue([[ZWEmoji emojify:@"thumbs up :+1: and thumbs down :-1:"] isEqualToString:@"thumbs up 👍 and thumbs down 👎"]);
   XCTAssertTrue([[ZWEmoji emojify:@":heart::heart::heart::heart::heart::heart:"] isEqualToString:@"❤❤❤❤❤❤"]);
   XCTAssertTrue([[ZWEmoji emojify:@"blah:+1: and thumbs down :-1:"] isEqualToString:@"blah👍 and thumbs down 👎"]);
-  
+	
   XCTAssertFalse([[ZWEmoji emojify:@":+1"] isEqualToString:@"👍"]);
   XCTAssertFalse([[ZWEmoji emojify:@":-1:"] isEqualToString:@"👍"]);
 }
-
 
 - (void)testDictionarySubstitution
 {

@@ -5,7 +5,6 @@ require 'rubygems'
 DIR = File.dirname(__FILE__)
 
 rows = File.open(DIR + '/../data/emoji.csv').readlines
-rows.shift # First row is column names, ignore that
 
 show_missing = ARGV.include?('-m')
 skip_output = ARGV.include?('-s')
@@ -53,7 +52,6 @@ nsdictionary = "@{#{dict}};"
 
 if !skip_output
  puts nsdictionary
- puts
 end
 
 if show_missing
