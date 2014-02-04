@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'ZWEmoji'
-  s.version  = '0.3.1'
+  s.version  = '0.4.0'
   s.license  = 'MIT'
   s.summary  = 'Objective-C library for using unicode emoji based on emoji codes used in Campfire/GitHub'
   s.homepage = 'https://github.com/zachwaugh/ZWEmoji'
